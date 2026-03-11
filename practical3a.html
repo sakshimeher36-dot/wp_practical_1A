@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        * {
+            
+            margin: 0;
+            padding: 0;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            box-sizing: border-box;
+        }
+        body {
+  background-color: #8bc6ec;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+ /* Calculator Container */
+.container {
+  background: #000;
+  padding: 25px;
+  width: 400px;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+    /* Display */
+    .calc-text{
+        margin-bottom: 20px;
+        padding: 10px;
+    }
+    .calc-text p {
+        width: 100%;
+        font-size: 3.5rem;
+        text-align: right;
+        color: #fff;
+        word-wrap: break-word;
+        word-break: break-all;
+        overflow: hidden;
+        min-height: 60px;
+    }
+     /* Button */
+    button {
+        background: #333;
+        color: #fff;
+        font-size: 1.5rem;
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        height: 70px;
+        width: 70px;
+        transition: transform 0.1s ease, filter 0.1s ease;
+    }
+    /* button Grid */
+    .calc-keys{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 15px;
+    }
+    /* Zero button (wider) */
+    .key-zero{
+        grid-column: span 2;
+        width: 100%;
+        borer-radius: 40px;
+    }
+    /* Operators (+ - * /) */
+    .key-operator {
+        background: #ff9500;
+     
+    }
+    /* AC,DEL,% */
+    .key-others {
+        background: #a6a6a6;
+        color: #000;    
+    }
+    </style>
+ </head>
+ <body>
+     <!-- Calculator Container -->
+    <div class="container">
+        <div class="calc-text">
+        <p id="user-input">0</p>
+      </div>
+      <div class="calc-keys">
+          <button type="button" class="key-others operations">AC</button>
+        <button type="button" class="key-others operations">DEL</button>
+        <button type="button" class="key-others operations">%</button>
+        <button type="button" class="key-operate operations">/</button>
+        <button type="button" class="numbers">7</button>
+        <button type="button" class="numbers">8</button>
+        <button type="button" class="numbers">9</button>
+        <button type="button" class="key-operate operations">*</button>
+         <button type="button" class="numbers">4</button>
+        <button type="button" class="numbers">5</button>
+        <button type="button" class="numbers">6</button>
+        <button type="button" class="key-operate operations">-</button>
+         <button type="button" class="numbers">1</button>
+        <button type="button" class="numbers">2</button>
+        <button type="button" class="numbers">3</button>
+        <button type="button" class="key-operate operations">+</button>
+        <button type="button" class="key-zero numbers">0</button>
+        <button type="button" class="numbers">.</button>
+        <button type="button" class="key-operate operations">=</button>
+        </div>
+    </div>
+</body>
+</html>
